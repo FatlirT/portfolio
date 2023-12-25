@@ -19,7 +19,7 @@ export default function Home() {
             <h1 className="text-5xl font-black w-full justify-start flex">Hey! 👋</h1><br /><br /><br className="" />
             <div className="w-full mb-16">
               <div className="pb-2">
-                <h1 className="inline-block text-xl">I`&apos;`m </h1><h1 className='font-bold inline-block text-xl pl-[7px]'>@</h1><h1 className="inline-block text-2xl font-bold pr-[7px]">FatlirT,</h1><h1 className="inline-block text-xl">the</h1>
+                <h1 className="inline-block text-xl">I&apos;m </h1><h1 className='font-bold inline-block text-xl pl-[7px]'>@</h1><h1 className="inline-block text-2xl font-bold pr-[7px]">FatlirT,</h1><h1 className="inline-block text-xl">the</h1>
               </div>
               <Typewriter fields={felds}></Typewriter>
               <h1 className='text-xl'>enthusiast!</h1>
