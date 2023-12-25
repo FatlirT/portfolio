@@ -27,17 +27,21 @@ body {
 }
 
 .typewrite {
-    display: inline-block;
+    overflow: visible;
+    width: max-content;
 }
 
 .typewrite-text {
-    font-family: monospace;
+    color: #00c0ff;
+    font-weight: bolder;
+    font-size: xx-large;
     border-right: 5px solid;
+    text-shadow: #ffffff39 3px 6px 9px;
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: typing-backspace 5s steps(86),
-        cursor 0.4s step-end infinite alternate;
+    animation: cursor 0.4s step-end infinite alternate,
+        typing 9s steps(var(--stepCount), start) infinite;
 }
 
 @keyframes cursor {
@@ -50,14 +54,21 @@ body {
     from {
         width: 0;
     }
-}
 
-@keyframes typing-backspace {
-    from {
-        width: 100;
+    9% {
+        width: 100%;
     }
+
+    90% {
+        width: 100%;
+    }
+
+    99% {
+        width: 0%;
+    }
+
     to {
-        width: 0;
+        width: 0%;
     }
 }
 
@@ -95,40 +106,38 @@ body {
 .toggle-container {
     display: flex;
     align-items: center;
-    justify-content: center;
-    margin-top: 20px;
+    background-color: #252a30ab; /* Night mode background color */
+    border-radius: 20px;
+    padding: 8px;
 }
 
-.toggle-input {
-    display: none;
-}
-
-.toggle-label {
-    cursor: pointer;
-    width: 50px;
-    height: 26px;
-    background-color: #ccc;
-    border-radius: 13px;
-    position: relative;
-    transition: background-color 0.3s;
-}
-
-.toggle-label:before {
-    content: "";
-    width: 22px;
-    height: 22px;
-    background-color: #fff;
-    border-radius: 50%;
+.toggle-switch {
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 0.6);
+    padding: 10px;
     position: absolute;
-    top: 2px;
-    left: 2px;
-    transition: transform 0.3s;
+    z-index: 1000;
+    align-items: center;
+    background-color: #a3a3a3; /* Night mode background color */
+    border-radius: 20px;
 }
 
-.toggle-input:checked + .toggle-label {
-    background-color: #4caf50; /* Green color for night mode */
+.toggle-switch-anim {
+    animation: toggleRight 1s ease forwards;
 }
 
-.toggle-input:checked + .toggle-label:before {
-    transform: translateX(24px);
+.toggle-switch-anim-reverse {
+    animation: toggleRight 1s reverse ease;
+}
+
+@keyframes toggleRight {
+    from {
+        transform: translateX(0);
+        box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 0.6);
+    }
+    to {
+        transform: translateX(20px);
+        box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
+    }
 }

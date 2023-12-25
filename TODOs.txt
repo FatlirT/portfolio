@@ -1,10 +1,13 @@
 TODOS:
 
+- create proj-man-plan
 - nav bar move options to right, add night mode button, make mobile nav toggleable with javascript.
-- add javascript to typewriter
 - center content differently on desktop and mobile using media queries
 - create dark mode and light mode themes
 - about me section
+- article section
+- full cms
 - footer
+- social media links
 - create projects view section, click for more, image showcase, extensive description
 - view for each project, details, tech used, link to live project, link to gh source, live preview

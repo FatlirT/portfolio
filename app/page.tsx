@@ -1,3 +1,4 @@
+import fields from '@/assets/fields';
 import projects from '@/assets/projects';
 import Splash from '@/components/Splash';
 import Typewriter from '@/components/Typewriter';
@@ -6,23 +7,30 @@ import Image from 'next/image';
 export default function Home() {
 
   const projs = projects;
+  const felds = fields;
 
   return (
     <>
       <Splash></Splash>
-      <main className="flex min-h-screen flex-col items-center justify-between p-24">
-        {/* <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-          <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-            Greetings!&nbsp;
-            <code className="font-mono font-bold">👍</code>
-          </p>
-        </div> */}
+      <main className="flex flex-col items-center justify-between w-full max-w-7xl mx-auto px-16 mb-16">
 
-        <h1> I am a </h1>
-        <Typewriter></Typewriter>
-        <h2>enthusiast.</h2>
+        <div className="flex flex-row justify-between w-full items-center">
+          <div className='w-full flex-col'>
+            <h1 className="text-5xl font-black w-full justify-start flex">Hey! 👋</h1><br /><br /><br className="" />
+            <div className="w-full mb-16">
+              <div className="pb-2">
+                <h1 className="inline-block text-xl">I'm </h1><h1 className='font-bold inline-block text-xl pl-[7px]'>@</h1><h1 className="inline-block text-2xl font-bold pr-[7px]">FatlirT,</h1><h1 className="inline-block text-xl">the</h1>
+              </div>
+              <Typewriter fields={felds}></Typewriter>
+              <h1 className='text-xl'>enthusiast!</h1>
+            </div>
+          </div>
+          <div className='flex flex-col justify-start text-9xl font-black text-yellow-300'>
+            WIP
+          </div>
+        </div>
 
-        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
+        <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1] mb-16">
           <Image
             className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70]"
             src="/images/ft.png"
@@ -33,7 +41,7 @@ export default function Home() {
           />
         </div>
 
-        <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
+        {/* <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
 
           {
             projects.map((project) =>
@@ -44,8 +52,8 @@ export default function Home() {
                 <h4>{project.webApp}</h4>
               </div>
             )}
-        </div>
-      </main>
+        </div> */}
+      </main >
     </>
   );
 }
