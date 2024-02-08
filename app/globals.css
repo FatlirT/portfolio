@@ -109,6 +109,7 @@ body {
     background-color: #252a30ab; /* Night mode background color */
     border-radius: 20px;
     padding: 8px;
+    user-select: none;
 }
 
 .toggle-switch {
