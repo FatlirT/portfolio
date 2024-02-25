@@ -3,16 +3,22 @@
 @tailwind utilities;
 
 :root {
-    --foreground-rgb: 0, 0, 0;
-    --background-start-rgb: 214, 219, 220;
-    --background-end-rgb: 255, 255, 255;
+    --bue: #00c0ff;
+    --tog: #252a3064;
+    --tog-but: #ffffff;
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 100, 200;
+    --background-end-rgb: 0, 50, 100;
 }
 
 @media (prefers-color-scheme: dark) {
     :root {
+        --bue: #00c0ff;
+        --tog: #101010;
+        --tog-but: #c6c6c6;
         --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 0, 0;
-        --background-end-rgb: 0, 0, 0;
+        --background-start-rgb: 25, 25, 25;
+        --background-end-rgb: 10, 10, 10;
     }
 }
 
@@ -35,7 +41,7 @@ body {
 }
 
 .typewrite-text {
-    color: #00c0ff;
+    color: var(--bue);
     font-weight: bolder;
     font-size: xx-large;
     border-right: 5px solid;
@@ -112,7 +118,7 @@ body {
 .toggle-container {
     display: flex;
     align-items: center;
-    background-color: #252a30ab; /* Night mode background color */
+    background-color: var(--tog); /* Night mode background color */
     border-radius: 20px;
     padding: 8px;
     user-select: none;
@@ -126,7 +132,7 @@ body {
     position: absolute;
     z-index: 1000;
     align-items: center;
-    background-color: #a3a3a3; /* Night mode background color */
+    background-color: var(--tog-but); /* Night mode background color */
     border-radius: 20px;
     transform: translateX(20px);
     transition:
