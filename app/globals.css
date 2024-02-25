@@ -16,6 +16,9 @@
     }
 }
 
+#wave {
+    text-shadow: 3px 3px 25px #b8b8b8;
+}
 body {
     color: rgb(var(--foreground-rgb));
     background: linear-gradient(
@@ -40,7 +43,8 @@ body {
     width: 100%;
     white-space: nowrap;
     overflow: hidden;
-    animation: cursor 0.4s step-end infinite alternate,
+    animation:
+        cursor 0.4s step-end infinite alternate,
         typing 9s steps(var(--stepCount), start) infinite;
 }
 
@@ -90,6 +94,8 @@ body {
     background-color: black;
 
     animation: fadeOut 0.8s ease 1.3s forwards;
+
+    user-select: none;
 }
 
 @keyframes fadeOut {
@@ -122,23 +128,13 @@ body {
     align-items: center;
     background-color: #a3a3a3; /* Night mode background color */
     border-radius: 20px;
+    transform: translateX(20px);
+    transition:
+        transform 1s ease,
+        box-shadow 1s ease;
 }
 
-.toggle-switch-anim {
-    animation: toggleRight 1s ease forwards;
-}
-
-.toggle-switch-anim-reverse {
-    animation: toggleRight 1s reverse ease;
-}
-
-@keyframes toggleRight {
-    from {
-        transform: translateX(0);
-        box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 0.6);
-    }
-    to {
-        transform: translateX(20px);
-        box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
-    }
+.toggle-switch.alt {
+    transform: translateX(0px);
+    box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
 }
