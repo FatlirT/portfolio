@@ -9,6 +9,7 @@ const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
   title: 'FatlirT\'s Portfolio',
   description: 'Fatlir Topalli, Computer Science MSci, Software, DevSecOps, Data Engineer',
+  viewport: {width='device-width', initialScale=1.0, maximumScale=1.0}
 };
 
 export default function RootLayout({
