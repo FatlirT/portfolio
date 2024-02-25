@@ -144,3 +144,21 @@ body {
     transform: translateX(0px);
     box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
 }
+
+.mob-menu.icon.bar {
+    transition:
+        transform 1s ease,
+        opacity 0.5s ease;
+}
+
+.mob-menu.icon.close .mob-menu.icon.bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-12px, 10px);
+}
+
+.mob-menu.icon.close .mob-menu.icon.bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mob-menu.icon.close .mob-menu.icon.bar:nth-child(3) {
+    transform: rotate(45deg) translate(5px, -17px);
+}
