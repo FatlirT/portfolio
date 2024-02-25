@@ -11,16 +11,16 @@ const Nav = () => {
 
 
                     <div className="items-center flex">
-                        <div className="flex flex-shrink-0 items-center">
-                            <a href="/"><Image className="h-8 w-auto" src="/images/ft.png" alt="Your Company"
+                        <div className="flex flex-shrink-0 items-center ">
+                            <a href="/"><Image className="h-8 w-auto drop-shadow-[0.1rem_0_0.25rem_#00011099]" src="/images/ft.png" alt="Your Company"
                                 width="100" height="100" />
                             </a>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="items-center flex space-x-4">
-                                <a href="#" className="text-gray-300 hover:bg-gray-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                                <a href="#" className="text-gray-300 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About me</a>
-                                <a href="#" className="text-gray-300 hover:bg-slate-700 hover:text-white rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00011099] hover:bg-gray-700  rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00011099] hover:bg-slate-700  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About me</a>
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00011099] hover:bg-slate-700  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
                             </div>
                         </div>
                     </div>
