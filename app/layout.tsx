@@ -18,7 +18,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={`${inter.className} flex flex-col items-center justify-center`}>
+      <body className={`${inter.className} flex flex-col items-center justify-center overflow-x-hidden`}>
         <nav className="mb-16 w-full sticky backdrop-blur bg-gradient-to-b from-white/10 to-white/0">
           <Nav></Nav>
         </nav>
