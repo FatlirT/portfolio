@@ -11,8 +11,8 @@ const Toggle = ({ defOption, altOption }: { defOption: string; altOption: string
 
     return (
 
-        <div onClick={handleToggleClick} className="hover:cursor-pointer hover:bg-neutral-600 active:bg-[#252a30ab] active:border-2 active:m-[-2px] toggle-container px-3 py-2 text-sm font-medium flex">
-            <div className={`toggle-switch hover:bg-white active:bg-[#a3a3a3] active:m-[-2px] active:border-2 ${isDefault ? '' : 'alt'}`}></div>
+        <div onClick={handleToggleClick} className="hover:cursor-pointer hover:bg-slate-900/50 dark:hover:bg-neutral-900/80 active:bg-[#252a30ab] active:border-2 active:m-[-2px] toggle-container px-3 py-2 text-sm font-medium flex">
+            <div className={`toggle-switch hover:bg-white active:bg-[#d5d5d5] active:m-[-2px] active:border-2 ${isDefault ? '' : 'alt'}`}></div>
             <div>
                 <label className="toggle-label hover:cursor-pointer">{defOption} {altOption}</label>
             </div>
