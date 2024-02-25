@@ -43,7 +43,7 @@ export default function Home() {
 
           {
             projects.map((project) =>
-              <div>
+              <div key={project.name}>
                 <h1>{project.name}</h1>
                 <h2>{project.description}</h2>
                 <h3>{project.sourceCode}</h3>
