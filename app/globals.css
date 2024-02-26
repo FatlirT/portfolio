@@ -145,6 +145,16 @@ body {
     box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
 }
 
+.mob-menu.tray.anim {
+    animation: fadeIn 1s ease forwards;
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
 .mob-menu.icon.bar {
     transition:
         transform 1s ease,
