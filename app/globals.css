@@ -2,13 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    --bue: #00c0ff;
-    --tog: #252a3064;
-    --tog-but: #ffffff;
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 100, 200;
-    --background-end-rgb: 0, 50, 100;
+@layer base {
+    :root {
+        --my-blue: #00c0ff;
+        --tog: #252a3064;
+        --tog-but: #ffffff;
+        --glow: #000;
+        --foreground-rgb: 255, 255, 255;
+        --background-start-rgb: 0, 100, 200;
+        --background-end-rgb: 0, 50, 100;
+    }
 }
 
 @media (prefers-color-scheme: dark) {
@@ -16,6 +19,7 @@
         --bue: #00c0ff;
         --tog: #101010;
         --tog-but: #c6c6c6;
+        --glow: #fff;
         --foreground-rgb: 255, 255, 255;
         --background-start-rgb: 25, 25, 25;
         --background-end-rgb: 10, 10, 10;
@@ -93,25 +97,42 @@ body {
 
     position: fixed;
 
-    justify-content: center;
-
     z-index: 999;
 
-    background-color: black;
+    background: linear-gradient(
+            to bottom,
+            transparent,
+            rgb(var(--background-end-rgb))
+        )
+        rgb(var(--background-start-rgb));
 
-    animation: fadeOut 0.8s ease 1.3s forwards;
+    animation: fadeOut 1s ease 0.9s forwards;
+}
 
-    user-select: none;
+#FT {
+    transform-origin: 55% 45%;
+}
+
+#F {
+    transform: translateX(45%) translateY(-50%);
+    animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+#T {
+    transform: translateX(45%) translateY(50%);
+    animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 @keyframes fadeOut {
-    from {
-        opacity: 100%;
-    }
-
     to {
         opacity: 0;
         visibility: hidden;
+    }
+}
+
+@keyframes slide {
+    to {
+        transform: translateX(45%) translateY(0%);
     }
 }
 
