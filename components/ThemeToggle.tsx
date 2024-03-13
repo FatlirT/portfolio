@@ -20,10 +20,7 @@ const ThemeToggle = () => {
 
 
     return (
-
-        <div onClick={handleToggleClick}>
-            <Toggle defPref={resolvedTheme === 'light' ? true : false} defOption="☀️" altOption="🌙"></Toggle>
-        </div>
+        <Toggle onClick={handleToggleClick} defPref={resolvedTheme === 'light' ? true : false} defOption="☀️" altOption="🌙"></Toggle>
     );
 };
 export default ThemeToggle;
