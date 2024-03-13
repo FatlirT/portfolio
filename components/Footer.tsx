@@ -8,15 +8,9 @@ const Footer = () => {
             <div className="w-full max-w-screen-xl mx-auto p-4 md:py-8">
                 <div className="sm:flex sm:items-center sm:justify-between flex-row">
                     <a href="#" className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse">
-                        <img src="images/FT.svg" className="h-5" alt="Ft Logo" />
+                        <img src="images/FT.svg" className="h-4" alt="Ft Logo" />
                     </a>
                     <ul className="flex items-center mb-6 text-sm font-medium text-light-acc/40 sm:mb-0 space-x-4">
-                        <li>
-                            <a href="#projects" className="hover:underline">Projects</a>
-                        </li>
-                        <li>
-                            <a href="#about" className="hover:underline">About me</a>
-                        </li>
                         <li>
                             <a href="https://linkedin.com/in/FatlirT" target="_blank" className="fill-light-acc/40 hover:fill-light-acc"><svg version="1.0" xmlns="http://www.w3.org/2000/svg"
                                 width="20" height="20" viewBox="0 0 600.000000 600.000000"
@@ -68,6 +62,15 @@ const Footer = () => {
 303 -865 474 -1367 507 -175 12 -192 12 -375 0z"/>
                                 </g>
                             </svg></a>
+                        </li>
+                        <li>
+                            <a href="#projects" className="hover:underline">Skills</a>
+                        </li>
+                        <li>
+                            <a href="#projects" className="hover:underline">Projects</a>
+                        </li>
+                        <li>
+                            <a href="#projects" className="hover:underline">Articles</a>
                         </li>
                     </ul>
                 </div>
