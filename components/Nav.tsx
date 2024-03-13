@@ -53,7 +53,7 @@ const Nav = () => {
             </div>
 
             {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-            <div className={` opacity-0 sm:hidden mob-menu tray ${isOpen ? "block anim" : "hidden"}`} id="mobile-menu">
+            <div className={` w-full absolute opacity-0 sm:hidden mob-menu tray ${isOpen ? "block anim" : "hidden"}`} id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2">
                     <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200">About me</a>
                     <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Projects</a>

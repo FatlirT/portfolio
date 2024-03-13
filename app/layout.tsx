@@ -24,7 +24,7 @@ export default function RootLayout({
     <html className="overflow-x-hidden" suppressHydrationWarning lang="en">
       <body className={`${inter.className} flex flex-col items-center justify-center overflow-x-hidden overflow-y-hidden`}>
         <Providers>
-          <nav className="mb-16 w-full sticky backdrop-blur bg-gradient-to-b from-white/10 to-white/0">
+          <nav className="z-50 mb-16 w-full sticky backdrop-blur bg-gradient-to-b from-white/10 to-white/0">
             <Nav></Nav>
           </nav>
           {children}

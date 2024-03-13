@@ -120,14 +120,24 @@ body {
 }
 
 /* MOB MENU  */
+.mob-menu.tray {
+    background: linear-gradient(
+        to bottom,
+        rgba(0, 0, 0, 0) 0%,
+        rgb(var(--background-start-rgb)) 10%,
+        rgb(var(--background-start-rgb)) 80%,
+        rgba(0, 0, 0, 0) 100%
+    );
+}
+
 .mob-menu.tray.anim {
-    animation: fadeIn 1s ease forwards;
+    animation: fadeIn 0.3s ease forwards;
 }
 
 .mob-menu.icon.bar {
     transition:
-        transform 1s ease,
-        opacity 0.5s ease;
+        transform 0.3s ease,
+        opacity 0.3s ease;
 }
 
 .mob-menu.icon.close .mob-menu.icon.bar:nth-child(1) {
