@@ -1,12 +1,13 @@
 'use client';
 import { useState } from "react";
 
-const Toggle = ({ defPref, defOption, altOption }: { defPref: boolean; defOption: string; altOption: string; }) => {
+const Toggle = ({ onClick, defPref, defOption, altOption }: { onClick: Function; defPref: boolean; defOption: string; altOption: string; }) => {
 
     const [isDefault, setIsDefault] = useState(defPref);
 
     const handleToggleClick = () => {
         setIsDefault(!isDefault);
+        onClick();
     };
 
     return (
