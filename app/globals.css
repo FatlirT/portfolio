@@ -21,7 +21,7 @@
             --glow: 255 255 255;
             --foreground-rgb: 255 255 255;
             --background-start-rgb: 25 25 25;
-            --background-end-rgb: 10 30 50;
+            --background-end-rgb: 5 15 25;
         }
     }
 }
