@@ -40,7 +40,6 @@ export default function Home() {
 
       <div id="about" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Skills</h1>
-        <Nebula></Nebula>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           <p>ABOUTME</p>
         </div>
@@ -48,7 +47,6 @@ export default function Home() {
 
       <div id="projects" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Projects</h1>
-        <Nebula></Nebula>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           {
             projects.map((project) =>
@@ -64,7 +62,6 @@ export default function Home() {
 
       <div id="featured-articles" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Featured Articles</h1>
-        <Nebula></Nebula>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           <p>ABOUTME</p>
         </div>
