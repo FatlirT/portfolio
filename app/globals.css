@@ -3,32 +3,29 @@
 @tailwind utilities;
 
 @layer base {
-    :root {
-        --my-blue: #00c0ff;
-        --tog: #252a3064;
-        --tog-but: #ffffff;
-        --glow: #000;
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 0, 100, 200;
-        --background-end-rgb: 0, 50, 100;
+    :root[data-theme="light"] {
+        --my-blue: 200 255 255;
+        --dark-acc: 37 42 48;
+        --light-acc: 255 255 255;
+        --glow: 0 0 0;
+        --foreground-rgb: 255 255 255;
+        --background-start-rgb: 0 150 200;
+        --background-end-rgb: 0 50 100;
+    }
+
+    @media (prefers-color-scheme: dark) {
+        :root {
+            --my-blue: 0 192 255;
+            --dark-acc: 16 16 16;
+            --light-acc: 198 198 198;
+            --glow: 255 255 255;
+            --foreground-rgb: 255 255 255;
+            --background-start-rgb: 25 25 25;
+            --background-end-rgb: 10 30 50;
+        }
     }
 }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-        --bue: #00c0ff;
-        --tog: #101010;
-        --tog-but: #c6c6c6;
-        --glow: #fff;
-        --foreground-rgb: 255, 255, 255;
-        --background-start-rgb: 25, 25, 25;
-        --background-end-rgb: 10, 10, 10;
-    }
-}
-
-#wave {
-    text-shadow: 3px 3px 25px #b8b8b8;
-}
 body {
     color: rgb(var(--foreground-rgb));
     background: linear-gradient(
@@ -39,13 +36,15 @@ body {
         rgb(var(--background-start-rgb));
 }
 
+/* TYPE-WRITE  */
+
 .typewrite {
     overflow: visible;
     width: max-content;
 }
 
 .typewrite-text {
-    color: var(--bue);
+    color: rgb(var(--my-blue));
     font-weight: bolder;
     font-size: xx-large;
     border-right: 5px solid;
@@ -86,6 +85,70 @@ body {
     }
 }
 
+#wave {
+    text-shadow: 3px 3px 25px;
+}
+
+/* NIGHT/LIGHT TOGGLE  */
+
+.toggle-container {
+    display: flex;
+    align-items: center;
+    border-radius: 20px;
+    padding: 8px;
+    user-select: none;
+}
+
+.toggle-switch {
+    box-sizing: border-box;
+    display: flex;
+    box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 0.6);
+    padding: 10px;
+    position: absolute;
+    z-index: 1000;
+    align-items: center;
+    border-radius: 20px;
+    transform: translateX(20px);
+    transition:
+        transform 1s ease,
+        box-shadow 1s ease;
+}
+
+.toggle-switch.alt {
+    transform: translateX(0px);
+    box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
+}
+
+/* MOB MENU  */
+.mob-menu.tray.anim {
+    animation: fadeIn 1s ease forwards;
+}
+
+.mob-menu.icon.bar {
+    transition:
+        transform 1s ease,
+        opacity 0.5s ease;
+}
+
+.mob-menu.icon.close .mob-menu.icon.bar:nth-child(1) {
+    transform: rotate(-45deg) translate(-12px, 10px);
+}
+
+.mob-menu.icon.close .mob-menu.icon.bar:nth-child(2) {
+    opacity: 0;
+}
+
+.mob-menu.icon.close .mob-menu.icon.bar:nth-child(3) {
+    transform: rotate(45deg) translate(5px, -17px);
+}
+
+@keyframes fadeIn {
+    100% {
+        opacity: 1;
+    }
+}
+
+/* SPLASH */
 .splash {
     top: 0;
     left: 0;
@@ -109,17 +172,13 @@ body {
     animation: fadeOut 1s ease 0.9s forwards;
 }
 
-#FT {
-    transform-origin: 55% 45%;
-}
-
 #F {
-    transform: translateX(45%) translateY(-50%);
+    transform: translateY(-25%);
     animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
 #T {
-    transform: translateX(45%) translateY(50%);
+    transform: translateY(25%);
     animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
@@ -132,64 +191,24 @@ body {
 
 @keyframes slide {
     to {
-        transform: translateX(45%) translateY(0%);
+        transform: translateY(0%);
     }
 }
 
-.toggle-container {
-    display: flex;
-    align-items: center;
-    background-color: var(--tog); /* Night mode background color */
-    border-radius: 20px;
-    padding: 8px;
-    user-select: none;
+/* BACKDROP SPIN */
+
+#backdrop {
+    transform-origin: center;
+    animation: spin 20s linear infinite;
 }
 
-.toggle-switch {
-    box-sizing: border-box;
-    display: flex;
-    box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 0.6);
-    padding: 10px;
-    position: absolute;
-    z-index: 1000;
-    align-items: center;
-    background-color: var(--tog-but); /* Night mode background color */
-    border-radius: 20px;
-    transform: translateX(20px);
-    transition:
-        transform 1s ease,
-        box-shadow 1s ease;
-}
-
-.toggle-switch.alt {
-    transform: translateX(0px);
-    box-shadow: -2px 1px 5px 0px rgba(0, 0, 0, 0.6);
-}
-
-.mob-menu.tray.anim {
-    animation: fadeIn 1s ease forwards;
-}
-
-@keyframes fadeIn {
-    100% {
-        opacity: 1;
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
     }
 }
 
-.mob-menu.icon.bar {
-    transition:
-        transform 1s ease,
-        opacity 0.5s ease;
-}
-
-.mob-menu.icon.close .mob-menu.icon.bar:nth-child(1) {
-    transform: rotate(-45deg) translate(-12px, 10px);
-}
-
-.mob-menu.icon.close .mob-menu.icon.bar:nth-child(2) {
-    opacity: 0;
-}
-
-.mob-menu.icon.close .mob-menu.icon.bar:nth-child(3) {
-    transform: rotate(45deg) translate(5px, -17px);
+/* OTHER */
+#wave {
+    text-shadow: 3px 3px 25px #b8b8b8;
 }
