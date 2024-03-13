@@ -1,7 +1,7 @@
 'use client';
 import Image from "next/image";
-import Toggle from "./Toggle";
 import { useState } from "react";
+import ThemeToggle from "./ThemeToggle";
 
 const Nav = () => {
 
@@ -19,26 +19,26 @@ const Nav = () => {
 
                     <div className="items-center flex">
                         <div className="flex flex-shrink-0 items-center ">
-                            <a href="/"><Image className="h-8 w-auto drop-shadow-[0.1rem_0_0.25rem_#00011099]" src="/images/ft.png" alt="Fatlir Topalli logo"
-                                width="100" height="100" />
+                            <a href="/"><Image className="h-4 w-auto drop-shadow-[0.1rem_0_0.25rem_#00000090]" src="/images/FT.svg" alt="Fatlir Topalli logo"
+                                width={10} height={10} />
                             </a>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="items-center flex space-x-4">
-                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00011099] hover:bg-gray-700  rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00011099] hover:bg-slate-700  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About me</a>
-                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00011099] hover:bg-slate-700  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About me</a>
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
                             </div>
                         </div>
                     </div>
 
-                    <div className="hidden sm:block"><Toggle defOption="☀️" altOption="🌙"></Toggle></div>
+                    <div className="hidden sm:block"><ThemeToggle></ThemeToggle></div>
 
 
                     <div className="inset-y-0 left-0 flex items-center sm:hidden">
 
                         {/* <!-- Mobile menu button--> */}
-                        <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-slate-900/50 dark:hover:bg-neutral-900/80 active:bg-[#252a30ab] active:border-2 active:m-[-2px] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" onClick={handleToggleClick} aria-controls="mobile-menu" aria-expanded="false">
+                        <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:m-[-2px] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" onClick={handleToggleClick} aria-controls="mobile-menu" aria-expanded="false">
                             <span className="absolute -inset-0.5"></span>
 
                             {/* <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" --> */}
@@ -55,11 +55,10 @@ const Nav = () => {
             {/* <!-- Mobile menu, show/hide based on menu state. --> */}
             <div className={` opacity-0 sm:hidden mob-menu tray ${isOpen ? "block anim" : "hidden"}`} id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2">
-                    {/* <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" --> */}
-                    <a href="#" className="w-full hover:bg-slate-900/50 dark:hover:bg-neutral-900/80 active:bg-[#252a30ab] active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200">About me</a>
-                    <a href="#" className="w-full hover:bg-slate-900/50 dark:hover:bg-neutral-900/80 active:bg-[#252a30ab] active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Projects</a>
+                    <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200">About me</a>
+                    <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Projects</a>
                     <div className="sm:hidden px-3 py-2">
-                        <Toggle defOption="☀️" altOption="🌙"></Toggle>
+                        <ThemeToggle></ThemeToggle>
                     </div>
                 </div>
             </div>
