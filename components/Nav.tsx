@@ -25,8 +25,8 @@ const Nav = () => {
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="items-center flex space-x-4">
+                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Skills</a>
                                 <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                                <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">About me</a>
                                 <a href="#" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
                             </div>
                         </div>
@@ -53,10 +53,11 @@ const Nav = () => {
             </div>
 
             {/* <!-- Mobile menu, show/hide based on menu state. --> */}
-            <div className={` w-full absolute opacity-0 sm:hidden mob-menu tray ${isOpen ? "block anim" : "hidden"}`} id="mobile-menu">
+            <div className={`pb-12 w-full absolute opacity-0 sm:hidden mob-menu tray ${isOpen ? "block anim" : "hidden"}`} id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2">
-                    <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200">About me</a>
+                    <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200">Skills</a>
                     <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Projects</a>
+                    <a href="#" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Articles</a>
                     <div className="sm:hidden px-3 py-2">
                         <ThemeToggle></ThemeToggle>
                     </div>
