@@ -14,6 +14,9 @@ const fields = [
     {
         name: "Big Data",
     },
+    {
+        name: "DevSecOps",
+    },
 ];
 
 export default fields;
