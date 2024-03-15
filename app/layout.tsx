@@ -3,7 +3,6 @@ import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/Footer';
-import { useState } from 'react';
 import { Providers } from './providers';
 
 

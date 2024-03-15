@@ -1,10 +1,8 @@
-import fields from '@/assets/fields';
-import projects from '@/assets/projects';
-import Footer from '@/components/Footer';
+import fields from '@/data/fields';
+import projects from '@/data/projects';
 import Nebula from '@/components/Nebula';
 import Splash from '@/components/Splash';
 import Typewriter from '@/components/Typewriter';
-import Image from 'next/image';
 
 export default function Home() {
 
@@ -35,7 +33,7 @@ export default function Home() {
       </main >
 
 
-      <div id="about" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
+      <div id="skills" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Skills</h1>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           <p>REACT, NEXTJS</p>
@@ -57,7 +55,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div id="featured-articles" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
+      <div id="featured_articles" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Featured Articles</h1>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           <p>COMING SOON</p>
