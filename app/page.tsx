@@ -8,9 +8,6 @@ import Image from 'next/image';
 
 export default function Home() {
 
-  const projs = projects;
-  const felds = fields;
-
   return (
     <>
       <Splash></Splash>
@@ -23,7 +20,7 @@ export default function Home() {
               <div className="pb-2">
                 <h1 className="inline-block text-xl">I&apos;m </h1><h1 className='font-bold inline-block text-xl pl-[7px]'>@</h1><h1 className="inline-block text-2xl font-bold pr-[7px]">FatlirT,</h1><h1 className="inline-block text-xl">the</h1>
               </div>
-              <Typewriter fields={felds}></Typewriter>
+              <Typewriter fields={fields}></Typewriter>
               <h1 className='text-xl'>enthusiast!</h1>
             </div>
           </div>
@@ -41,7 +38,7 @@ export default function Home() {
       <div id="about" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Skills</h1>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <p>ABOUTME</p>
+          <p>REACT, NEXTJS</p>
         </div>
       </div>
 
@@ -63,7 +60,7 @@ export default function Home() {
       <div id="featured-articles" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16'>Featured Articles</h1>
         <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-          <p>ABOUTME</p>
+          <p>COMING SOON</p>
         </div>
       </div>
     </>
