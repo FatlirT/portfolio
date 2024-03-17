@@ -1,13 +1,20 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
- preserveAspectRatio="xMidYMid meet">
+import { ImgHTMLAttributes } from "react";
 
-<g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
-fill="#000" stroke="none">
-<path d="M2360 5049 c-154 -11 -357 -47 -516 -93 -902 -259 -1603 -1017 -1790
+interface props extends ImgHTMLAttributes<HTMLImageElement> {
+    fill: string;
+    className: string;
+}
+
+
+const GH = ({ fill, className }: props) => {
+    return (
+        <svg className={className} version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="512.000000pt" height="512.000000pt" viewBox="0 0 512.000000 512.000000"
+            preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,512.000000) scale(0.100000,-0.100000)"
+                fill={fill} stroke="none">
+                <path d="M2360 5049 c-154 -11 -357 -47 -516 -93 -902 -259 -1603 -1017 -1790
 -1934 -136 -669 -8 -1355 354 -1908 255 -390 580 -686 968 -886 141 -73 341
 -154 403 -164 58 -9 109 19 133 73 18 40 18 60 12 286 l-7 243 -86 -14 c-97
 -15 -256 -9 -386 13 -105 19 -211 71 -278 139 -53 53 -67 76 -136 229 -63 139
@@ -24,5 +31,9 @@ fill="#000" stroke="none">
 -52 17 -137 20 -503 5 -490 5 -489 72 -521 46 -21 83 -15 229 42 738 284 1320
 932 1533 1703 141 513 111 1108 -80 1601 -172 440 -475 842 -848 1122 -405
 303 -865 474 -1367 507 -175 12 -192 12 -375 0z"/>
-</g>
-</svg>
+            </g>
+        </svg>
+    );
+};
+
+export default GH;

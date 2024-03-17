@@ -1,13 +1,19 @@
-<?xml version="1.0" standalone="no"?>
-<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20010904//EN"
- "http://www.w3.org/TR/2001/REC-SVG-20010904/DTD/svg10.dtd">
-<svg version="1.0" xmlns="http://www.w3.org/2000/svg"
- width="600.000000pt" height="600.000000pt" viewBox="0 0 600.000000 600.000000"
- preserveAspectRatio="xMidYMid meet">
+import { ImgHTMLAttributes } from "react";
 
-<g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)"
-fill="#000" stroke="none">
-<path d="M1215 5939 c-217 -16 -363 -53 -526 -135 -313 -156 -532 -455 -603
+interface props extends ImgHTMLAttributes<HTMLImageElement> {
+    fill: string;
+    className: string;
+}
+
+const LI = ({ className, fill }: props) => {
+    return (
+        <svg className={className} version="1.0" xmlns="http://www.w3.org/2000/svg"
+            width="600.000000pt" height="600.000000pt" viewBox="0 0 600.000000 600.000000"
+            preserveAspectRatio="xMidYMid meet">
+
+            <g transform="translate(0.000000,600.000000) scale(0.100000,-0.100000)"
+                fill={fill} stroke="none">
+                <path d="M1215 5939 c-217 -16 -363 -53 -526 -135 -313 -156 -532 -455 -603
 -819 -32 -163 -36 -395 -36 -2000 0 -1592 4 -1800 35 -1970 77 -417 364 -751
 762 -886 236 -79 288 -81 2278 -76 1256 3 1702 7 1769 16 412 57 732 274 908
 616 84 163 121 318 138 563 13 205 13 3316 0 3512 -12 176 -30 278 -69 392
@@ -21,5 +27,9 @@ fill="#000" stroke="none">
 1177 330 0 330 0 3 -162 c1 -90 4 -163 6 -163 2 0 35 32 73 71 224 233 549
 339 869 284z m-2018 -1207 l2 -1178 -365 0 -365 0 0 1180 0 1180 363 -2 362
 -3 3 -1177z"/>
-</g>
-</svg>
+            </g>
+        </svg>
+    );
+};
+
+export default LI;
