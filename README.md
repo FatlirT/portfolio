@@ -6,12 +6,13 @@ Visit: [fatlirt.vercel.app](https://fatlirt.vercel.app)
 
 ### Front end (hosted on Vercel)
 
-- NextsJS with TS
-- Tailwind
+-   NextsJS with TS
+-   Tailwind
 
 ## Back end Infrastructure
 
-- *AWS SDK* to interact with *DynamoDB, S3*
+-   _AWS SDK_ to interact with _DynamoDB, S3_ to pull content
+-   Separate CMS applet to push content to DynamoDB/S3
 
 ## To run locally
 
