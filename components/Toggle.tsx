@@ -6,7 +6,7 @@ type Option = {
     symbol: string;
 };
 
-const Toggle = ({ onClick, mode, defOption, altOption }: { onClick: Function; mode: string; defOption: Option; altOption: Option; }) => {
+const Toggle = ({ onClick, mode, defOption, altOption }: { onClick: Function; mode: string | undefined; defOption: Option; altOption: Option; }) => {
 
     const handleToggleClick = () => {
         onClick();
