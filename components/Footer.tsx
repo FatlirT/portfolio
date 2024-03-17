@@ -62,13 +62,13 @@ const Footer = () => {
                             </svg></a>
                         </li>
                         <li>
-                            <a href="#projects" className="hover:underline">Skills</a>
+                            <a href="/#skills" className="hover:underline">Skills</a>
                         </li>
                         <li>
-                            <a href="#projects" className="hover:underline">Projects</a>
+                            <a href="/#projects" className="hover:underline">Projects</a>
                         </li>
                         <li>
-                            <a href="#projects" className="hover:underline">Articles</a>
+                            <a href="/articles" className="hover:underline">Articles</a>
                         </li>
                     </ul>
                 </div>

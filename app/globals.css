@@ -9,20 +9,23 @@
         --light-acc: 255 255 255;
         --glow: 0 0 0;
         --foreground-rgb: 255 255 255;
-        --background-end-rgb: 200 200 255;
-        --background-start-rgb: 0 50 100;
+        --background-end-rgb: 0 200 255;
+        --background-start-rgb: 0 100 200;
     }
 
-    @media (prefers-color-scheme: dark) {
-        :root {
-            --my-blue: 0 192 255;
-            --dark-acc: 16 16 16;
-            --light-acc: 198 198 198;
-            --glow: 255 255 255;
-            --foreground-rgb: 255 255 255;
-            --background-start-rgb: 25 25 25;
-            --background-end-rgb: 5 15 25;
-        }
+    :root[data-theme="dark"] {
+        --my-blue: 0 192 255;
+        --dark-acc: 16 16 16;
+        --light-acc: 198 198 198;
+        --glow: 255 255 255;
+        --foreground-rgb: 255 255 255;
+        --background-start-rgb: 25 25 25;
+        --background-end-rgb: 5 15 25;
+    }
+
+    #backdrop[data-theme="dark"] {
+        display: flex;
+        fill: red;
     }
 }
 
