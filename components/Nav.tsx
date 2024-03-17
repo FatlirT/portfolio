@@ -3,6 +3,7 @@ import Image from "next/image";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
 import { useTheme } from "next-themes";
+import FT from "./svg/FT";
 
 
 const Nav = () => {
@@ -23,8 +24,7 @@ const Nav = () => {
 
                     <div className="items-center flex">
                         <div className="flex flex-shrink-0 items-center ">
-                            <a href="/"><Image className="h-4 w-auto drop-shadow-[0.1rem_0_0.25rem_#00000090]" src="/images/FT.svg" alt="Fatlir Topalli logo"
-                                width={10} height={10} />
+                            <a href="/"><FT className="h-4 w-auto" />
                             </a>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
