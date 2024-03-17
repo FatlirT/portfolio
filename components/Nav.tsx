@@ -2,8 +2,12 @@
 import Image from "next/image";
 import { useState } from "react";
 import ThemeToggle from "./ThemeToggle";
+import { useTheme } from "next-themes";
+
 
 const Nav = () => {
+
+    const { setTheme, resolvedTheme } = useTheme();
 
     const [isOpen, setIsOpen] = useState(false);
 
@@ -32,7 +36,7 @@ const Nav = () => {
                         </div>
                     </div>
 
-                    <div className="hidden sm:block"><ThemeToggle></ThemeToggle></div>
+                    <div className="hidden sm:block"><ThemeToggle mode={resolvedTheme} toggleMode={setTheme}></ThemeToggle></div>
 
 
                     <div className="inset-y-0 left-0 flex items-center sm:hidden">
@@ -59,7 +63,7 @@ const Nav = () => {
                     <a href="#projects" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Projects</a>
                     <a href="/articles" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Articles</a>
                     <div className="sm:hidden px-3 py-2">
-                        <ThemeToggle></ThemeToggle>
+                        <ThemeToggle mode={resolvedTheme} toggleMode={setTheme}></ThemeToggle>
                     </div>
                 </div>
             </div>

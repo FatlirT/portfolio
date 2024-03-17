@@ -1,18 +1,19 @@
 'use client';
 import { useEffect, useState } from "react";
 import Toggle from "./Toggle";
-import { useTheme } from "next-themes";
 
-const ThemeToggle = () => {
+const ThemeToggle = ({ mode, toggleMode }: { mode: string | undefined, toggleMode: Function; }) => {
 
-    const { setTheme, resolvedTheme } = useTheme();
     const [mounted, setMounted] = useState(false);
 
     useEffect(() => setMounted(true), []);
 
     const handleToggleClick = () => {
-        setTheme(resolvedTheme === 'light' ? 'dark' : 'light');
+        toggleMode(mode === 'light' ? 'dark' : 'light');
     };
+
+    const defaultOption = { name: "light", symbol: "☀️" };
+    const altOption = { name: "dark", symbol: "🌙" };
 
     if (!mounted) return (
         <p>ThemeToggle</p>
@@ -20,7 +21,7 @@ const ThemeToggle = () => {
 
 
     return (
-        <Toggle onClick={handleToggleClick} defPref={resolvedTheme === 'light' ? true : false} defOption="☀️" altOption="🌙"></Toggle>
+        <Toggle onClick={handleToggleClick} mode={mode} defOption={defaultOption} altOption={altOption}></Toggle>
     );
 };
 export default ThemeToggle;
