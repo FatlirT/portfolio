@@ -44,7 +44,7 @@ export default function Home() {
                 {
                   skills[skillCategory].map((skill) =>
                     <div className={'flex flex-row justify-center m-4 ' + (skill.future ? 'saturate-0 opacity-50' : '')}>
-                      <SkillCard className='w-44' key={skill.name} skillImageUrl={skill.image_url} skillName={skill.name}></SkillCard>
+                      <SkillCard className='w-44' key={skill.name} skillImageUrl={skill.image_url} skillName={skill.name} skillFuture={skill.future}></SkillCard>
 
                     </div>
 
