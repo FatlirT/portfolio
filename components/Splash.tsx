@@ -1,5 +1,20 @@
+'use client';
+
+import { useEffect, useState } from "react";
+
 const Splash = () => {
-    return (
+    const [visible, setVisible] = useState(false);
+
+    useEffect(() => {
+        const hasPlayedAnimation = localStorage.getItem('hasPlayedAnimation');
+
+        if (!hasPlayedAnimation) {
+            setVisible(true);
+            localStorage.setItem('hasPlayedAnimation', 'true');
+        }
+    });
+
+    return visible && (
         <div className="splash flex w-full flex-row items-center justify-center">
             <svg width="1000" height="300" viewBox="-400 -100 1000 300" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g className="drop-shadow-lg" id="FT">
