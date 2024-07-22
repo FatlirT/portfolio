@@ -1,7 +1,6 @@
 import fields from '@/data/fields';
 import projects from '@/data/projects';
 import Nebula from '@/components/Nebula';
-import Splash from '@/components/Splash';
 import Typewriter from '@/components/Typewriter';
 
 export default function Home() {

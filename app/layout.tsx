@@ -4,6 +4,7 @@ import Nav from '@/components/Nav';
 import { Inter } from 'next/font/google';
 import Footer from '@/components/Footer';
 import { Providers } from './providers';
+import Splash from '@/components/Splash';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -25,6 +26,7 @@ export default function RootLayout({
           <nav className="z-50 mb-16 w-full sticky backdrop-blur bg-gradient-to-b from-white/10 to-white/0">
             <Nav></Nav>
           </nav>
+          <Splash></Splash>
           <main id="main" className="drop-shadow-2xl overflow-visible flex flex-col items-center justify-between w-full max-w-7xl mx-auto px-16 mb-16">
             {children}
           </main>
