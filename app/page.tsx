@@ -2,6 +2,8 @@ import fields from '@/data/fields';
 import projects from '@/data/projects';
 import Nebula from '@/components/Nebula';
 import Typewriter from '@/components/Typewriter';
+import skills from '@/data/skills';
+import SkillCard from '@/components/SkillCard';
 
 export default function Home() {
 
@@ -30,6 +32,28 @@ export default function Home() {
 
       <div id="skills" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16 drop-shadow-xl'>Skills</h1>
+        {
+          Object.keys(skills).map((skillCategory) => {
+            const skillCategoryTitleWords = skillCategory.split(" ");
+            const skillCategoryTitle = skillCategoryTitleWords.reduce((acc, curr, index) => {
+              return acc + curr.charAt(0).toUpperCase() + curr.slice(1).toLowerCase() + (index === skillCategoryTitleWords.length - 1 ? "" : " ");
+            }, "");
+            return <>
+              <h1 className='text-3xl font-black mb-10'>{skillCategoryTitle}</h1>
+              <div key={skillCategory} className="mb-32 grid text-center lg:sm:grid-cols-4 lg:text-left">
+                {
+                  skills[skillCategory].map((skill) =>
+                    <div className={'flex flex-row justify-center m-4 ' + (skill.future ? 'saturate-0 opacity-50' : '')}>
+                      <SkillCard className='w-44' key={skill.name} skillImageUrl={skill.image_url} skillName={skill.name}></SkillCard>
+
+                    </div>
+
+                  )
+                }
+              </div>
+            </>;
+          })
+        }
       </div>
 
       <div id="projects" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
