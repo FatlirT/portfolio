@@ -25,7 +25,9 @@ export default function RootLayout({
           <nav className="z-50 mb-16 w-full sticky backdrop-blur bg-gradient-to-b from-white/10 to-white/0">
             <Nav></Nav>
           </nav>
-          {children}
+          <main id="main" className="drop-shadow-2xl overflow-visible flex flex-col items-center justify-between w-full max-w-7xl mx-auto px-16 mb-16">
+            {children}
+          </main>
           <footer className="w-full shadow">
             <Footer></Footer>
           </footer>
