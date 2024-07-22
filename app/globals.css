@@ -184,24 +184,14 @@ body {
     animation: fadeOut 1s ease 0.9s forwards;
 }
 
-#FT {
-    animation: flash 1s linear forwards;
-}
-
-#F {
+.splash #F {
     transform: translateY(-25%);
     animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-#T {
+.splash #T {
     transform: translateY(25%);
     animation: slide 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-}
-
-@keyframes flash {
-    50% {
-        box-shadow: rgb(255, 0, 0);
-    }
 }
 
 @keyframes fadeOut {
