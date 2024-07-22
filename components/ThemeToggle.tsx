@@ -15,10 +15,6 @@ const ThemeToggle = ({ mode, toggleMode }: { mode: string | undefined, toggleMod
     const defaultOption = { name: "light", symbol: "☀️" };
     const altOption = { name: "dark", symbol: "🌙" };
 
-    if (!mounted) return (
-        <p>ThemeToggle</p>
-    );
-
 
     return (
         <Toggle onClick={handleToggleClick} mode={mode} defOption={defaultOption} altOption={altOption}></Toggle>
