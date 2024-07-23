@@ -12,7 +12,7 @@ const Splash = () => {
             setVisible(true);
             localStorage.setItem('hasPlayedAnimation', 'true');
         }
-    });
+    }, []);
 
     return visible && (
         <div className="splash flex w-full flex-row items-center justify-center">
