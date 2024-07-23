@@ -118,6 +118,11 @@ const skills: Skills = {
             future: true,
         },
         {
+            name: "Ansible",
+            image_url: "/images/ansible.svg",
+            future: false,
+        },
+        {
             name: "AWS",
             image_url: "/images/aws.svg",
             future: false,
