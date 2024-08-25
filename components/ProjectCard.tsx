@@ -27,7 +27,7 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, className, soure
                 </div>
                 < div className="caption-container items-center text-center flex flex-col font-black">
                     <div>{description}</div>
-                    {tech.map(technology => <div>{technology.name}</div>)}
+                    {tech.map(technology => <div key={technology.name}>{technology.name}</div>)}
                 </div>
                 {soureCodeUrl}
                 {url}
