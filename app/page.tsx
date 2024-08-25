@@ -72,7 +72,7 @@ export default function Home() {
         <div className="mb-32 flex flex-col text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
           {
             projects.map((project) =>
-              <ProjectCard name={project.name} description={project.description} imageUrls={project.imageUrls} tech={project.tech.map(tech => {
+              <ProjectCard key={project.name} name={project.name} description={project.description} imageUrls={project.imageUrls} tech={project.tech.map(tech => {
                 return skillsMap[tech];
               })} soureCodeUrl={project.sourceCodeUrl} url={project.url} wip={project.wip} className='mb-6'></ProjectCard>
             )
