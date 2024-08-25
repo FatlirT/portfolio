@@ -1,6 +1,6 @@
 type Skill = {
     name: string;
-    image_url: string;
+    imageUrl: string;
     future: boolean;
 };
 
@@ -9,175 +9,233 @@ type Skills = {
 };
 
 const skills: Skills = {
-    languages: [
+    Languages: [
         {
             name: "JavaScript",
-            image_url: "/images/js.svg",
+            imageUrl: "/images/js.svg",
             future: false,
         },
         {
             name: "TypeScript",
-            image_url: "/images/ts.svg",
+            imageUrl: "/images/ts.svg",
             future: false,
         },
         {
             name: "Python",
-            image_url: "/images/python.svg",
+            imageUrl: "/images/python.svg",
             future: false,
         },
         {
             name: "Java",
-            image_url: "/images/java.svg",
+            imageUrl: "/images/java.svg",
+            future: false,
+        },
+        {
+            name: "C++",
+            imageUrl: "/images/cpp.svg",
+            future: false,
+        },
+        {
+            name: "C#",
+            imageUrl: "/images/csharp.svg",
             future: false,
         },
         {
             name: "HTML",
-            image_url: "/images/html.svg",
+            imageUrl: "/images/html.svg",
             future: false,
         },
         {
             name: "CSS",
-            image_url: "/images/css.svg",
+            imageUrl: "/images/css.svg",
+            future: false,
+        },
+        {
+            name: "XML",
+            imageUrl: "/images/xml.svg",
+            future: false,
+        },
+        {
+            name: "JSON",
+            imageUrl: "/images/json.svg",
             future: false,
         },
     ],
 
-    frontend: [
+    Frontend: [
         {
             name: "React",
-            image_url: "/images/react.svg",
+            imageUrl: "/images/react.svg",
             future: false,
         },
         {
             name: "Tailwind",
-            image_url: "/images/tw.svg",
+            imageUrl: "/images/tw.svg",
             future: false,
         },
         {
-            name: "NextJS",
-            image_url: "/images/njs.svg",
+            name: "Next.js",
+            imageUrl: "/images/njs.svg",
+            future: false,
+        },
+        {
+            name: "Bootstrap",
+            imageUrl: "/images/bootstrap.svg",
             future: false,
         },
         {
             name: "JavaFX",
-            image_url: "/images/javafx.svg",
+            imageUrl: "/images/javafx.svg",
+            future: false,
+        },
+        {
+            name: "WPF",
+            imageUrl: "/images/wpf.svg",
             future: false,
         },
     ],
 
-    backend: [
+    Backend: [
         {
             name: "Express.js",
-            image_url: "/images/expressjs.svg",
+            imageUrl: "/images/expressjs.svg",
             future: false,
         },
         {
-            name: "NodeJS",
-            image_url: "/images/node.svg",
-            future: false,
-        },
-        {
-            name: "PostgreSQL",
-            image_url: "/images/postgres.svg",
+            name: "Node.js",
+            imageUrl: "/images/node.svg",
             future: false,
         },
         {
             name: "Rails",
-            image_url: "/images/rails.svg",
+            imageUrl: "/images/rails.svg",
+            future: false,
+        },
+        {
+            name: ".NET",
+            imageUrl: "/images/dotnet.svg",
             future: false,
         },
     ],
 
-    dev: [
+    Database: [
+        {
+            name: "PostgreSQL",
+            imageUrl: "/images/postgres.svg",
+            future: false,
+        },
+        {
+            name: "MongoDB",
+            imageUrl: "/images/mongodb.svg",
+            future: false,
+        },
+        {
+            name: "DynamoDB",
+            imageUrl: "/images/dynamodb.svg",
+            future: false,
+        },
+        {
+            name: "Redis",
+            imageUrl: "/images/redis.svg",
+            future: false,
+        },
+    ],
+
+    Dev: [
         {
             name: "Git",
-            image_url: "/images/git.svg",
+            imageUrl: "/images/git.svg",
             future: false,
         },
         {
             name: "GitHub",
-            image_url: "/images/gh.svg",
+            imageUrl: "/images/gh.svg",
             future: false,
         },
         {
             name: "Trello",
-            image_url: "/images/trello.svg",
+            imageUrl: "/images/trello.svg",
             future: false,
         },
         {
             name: "Slack",
-            image_url: "/images/slack.svg",
+            imageUrl: "/images/slack.svg",
             future: false,
         },
     ],
 
-    devops: [
+    DevOps: [
         {
             name: "ArgoCD",
-            image_url: "/images/argo.svg",
+            imageUrl: "/images/argo.svg",
+            future: true,
+        },
+        {
+            name: "CircleCI",
+            imageUrl: "/images/circleci.svg",
             future: true,
         },
         {
             name: "Ansible",
-            image_url: "/images/ansible.svg",
+            imageUrl: "/images/ansible.svg",
             future: false,
         },
         {
             name: "AWS",
-            image_url: "/images/aws.svg",
+            imageUrl: "/images/aws.svg",
             future: false,
         },
         {
             name: "Vercel",
-            image_url: "/images/vc.svg",
+            imageUrl: "/images/vc.svg",
             future: false,
         },
         {
             name: "Docker",
-            image_url: "/images/docker.svg",
+            imageUrl: "/images/docker.svg",
             future: false,
         },
         {
             name: "Grafana",
-            image_url: "/images/grafana.svg",
+            imageUrl: "/images/grafana.svg",
             future: true,
         },
         {
             name: "Helm",
-            image_url: "/images/helm.svg",
+            imageUrl: "/images/helm.svg",
             future: true,
         },
         {
             name: "K8s",
-            image_url: "/images/k8s.svg",
+            imageUrl: "/images/k8s.svg",
             future: true,
         },
         {
             name: "Prometheus",
-            image_url: "/images/prom.svg",
+            imageUrl: "/images/prom.svg",
             future: true,
         },
         {
             name: "Terraform",
-            image_url: "/images/terraform.svg",
+            imageUrl: "/images/terraform.svg",
             future: false,
         },
     ],
 
-    "machine Learning": [
+    "Machine Learning": [
         {
             name: "Sci-kit Learn",
-            image_url: "/images/scikit.svg",
+            imageUrl: "/images/scikit.svg",
             future: false,
         },
         {
             name: "Pandas",
-            image_url: "/images/pandas.svg",
+            imageUrl: "/images/pandas.svg",
             future: false,
         },
         {
             name: "Seaborn",
-            image_url: "/images/seaborn.svg",
+            imageUrl: "/images/seaborn.svg",
             future: false,
         },
     ],
