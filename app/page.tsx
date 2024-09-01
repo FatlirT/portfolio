@@ -48,7 +48,7 @@ export default function Home() {
           Object.keys(skills).map((skillCategory) => {
             return <>
               <h1 className='text-3xl font-black mb-10'>{skillCategory}</h1>
-              <div key={skillCategory} className="mb-32 grid text-center lg:sm:grid-cols-4 lg:text-left">
+              <div key={skillCategory} className="mb-32 grid text-center lg:grid-cols-4 lg:text-left md:grid-cols-3 sm:grid-cols-2">
                 {
                   skills[skillCategory].map((skill) =>
                     <div key={skill.name} className={'flex flex-row justify-center m-4 ' + (skill.future ? 'saturate-0 opacity-50' : '')}>
