@@ -12,7 +12,7 @@ interface props extends ImgHTMLAttributes<HTMLImageElement> {
 const SkillCard = ({ skillImageUrl, skillName, skillFuture, className }: props) => {
     return (
         <>
-            <div className={className + " shadow-lg shadow-black/30 bg-light-acc/35 rounded-3xl flex flex-col text-center items-center p-8 text-2xl " + (skillFuture ? 'saturate-0 opacity-70' : 'hover:bg-light-acc/45 active:opacity-80 cursor-pointer')}>
+            <div className={className + " shadow-lg shadow-dark-acc/30 bg-light-acc/35 rounded-3xl flex flex-col text-center items-center p-8 text-2xl " + (skillFuture ? 'saturate-0 opacity-70' : 'hover:bg-light-acc/45 active:opacity-80 cursor-pointer')}>
                 <div className="image-container w-40 h-40 flex flex-col justify-center items-center text-center center pb-5">
                     <Image
                         src={skillImageUrl}

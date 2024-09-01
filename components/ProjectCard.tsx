@@ -19,8 +19,8 @@ interface props extends ImgHTMLAttributes<HTMLImageElement> {
 const ProjectCard = ({ name, description, imageUrls, tech, wip, className, soureCodeUrl, url }: props) => {
     return (
         <>
-            <div className={className + " overflow-clip shadow-lg shadow-black/30 bg-light-acc/35 rounded-3xl flex flex-row text-center items-center p-8 text-2xl active:opacity-80 cursor-pointer relative"}>
-                <div id='wip-hazard-tape' className={(wip ? "" : "hidden") + " overflow-clip bg-black top-2 shadow-gray-800 shadow-lg -left-16 absolute -rotate-45 w-60 h-12 p-0"}>
+            <div className={className + " overflow-clip shadow-lg shadow-dark-acc/30 bg-light-acc/35 rounded-3xl flex flex-row text-center items-center p-8 text-2xl active:opacity-80 cursor-pointer relative"}>
+                <div id='wip-hazard-tape' className={(wip ? "" : "hidden") + " overflow-clip bg-black top-2 shadow-slate-700/70 shadow-lg -left-16 absolute -rotate-45 w-60 h-12 p-0"}>
 
                     <div className='bg-yellow-300 w-9 rotate-[22.5deg] h-20 absolute top-0 left-1' ></div>
                     <div className='bg-yellow-300 w-9 rotate-[22.5deg] h-20 absolute -top-3 left-[35%] -z-30' ></div>
