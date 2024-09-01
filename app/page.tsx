@@ -25,7 +25,7 @@ export default function Home() {
 
   return (
     <>
-      <div id="hero" className="flex flex-row w-full justify-center sm:text-center sm:justify-between text-center shrink-1">
+      <div id="hero" className="drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.3)] flex flex-row w-full justify-center sm:text-center sm:justify-between text-center shrink-1">
         <div className='flex flex-col text-nowrap text-center sm:text-left'>
           <h1 className="text-5xl font-black mb-8">Hey! <span>👋</span></h1>
           <div className="w-full mb-16 flex flex-col justify-center">
@@ -43,11 +43,11 @@ export default function Home() {
 
 
       <div id="skills" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
-        <h1 className='text-4xl font-bold mb-16 drop-shadow-xl'>Skills</h1>
+        <h1 className='text-4xl font-bold mb-16 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.3)]'>Skills</h1>
         {
           Object.keys(skills).map((skillCategory) => {
             return <>
-              <h1 className='text-3xl font-black mb-10'>{skillCategory}</h1>
+              <h1 className='text-3xl font-black mb-10 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.3)]'>{skillCategory}</h1>
               <div key={skillCategory} className="mb-32 grid text-center lg:grid-cols-4 lg:text-left md:grid-cols-3 sm:grid-cols-2">
                 {
                   skills[skillCategory].map((skill) =>

@@ -24,14 +24,14 @@ const Nav = () => {
 
                     <div className="items-center flex">
                         <div className="flex flex-shrink-0 items-center ">
-                            <a href="/"><FT className="h-4 w-auto" />
+                            <a href="/"><FT className="h-4 w-auto drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]" />
                             </a>
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
                             <div className="items-center flex space-x-4">
-                                <a href="/#skills" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Skills</a>
-                                <a href="/#projects" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Projects</a>
-                                <a href="/articles" className="drop-shadow-[0.1rem_0_0.25rem_#00000090] active:bg-dark-acc hover:bg-dark-acc/40  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
+                                <a href="/#skills" className="drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Skills</a>
+                                <a href="/#projects" className="drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)] active:bg-dark-acc hover:bg-dark-acc/40 rounded-md px-3 py-2 text-sm font-medium">Projects</a>
+                                <a href="/articles" className="drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)] active:bg-dark-acc hover:bg-dark-acc/40  rounded-md px-3 py-2 text-sm font-medium" aria-current="page">Articles</a>
                             </div>
                         </div>
                     </div>
@@ -42,7 +42,7 @@ const Nav = () => {
                     <div className="inset-y-0 left-0 flex items-center sm:hidden">
 
                         {/* <!-- Mobile menu button--> */}
-                        <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:m-[-2px] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white" onClick={handleToggleClick} aria-controls="mobile-menu" aria-expanded="false">
+                        <button type="button" className="relative inline-flex items-center justify-center rounded-md p-2 hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:m-[-2px] focus:outline-none focus:ring-2 focus:ring-inset focus:ring-white drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]" onClick={handleToggleClick} aria-controls="mobile-menu" aria-expanded="false">
                             <span className="absolute -inset-0.5"></span>
 
                             {/* <!-- Icon when menu is closed. Menu open: "hidden", Menu closed: "block" --> */}
@@ -59,9 +59,9 @@ const Nav = () => {
             {/* <!-- Mobile menu, show/hide based on menu state. --> */}
             <div className={`pb-12 w-full absolute opacity-0 sm:hidden mob-menu tray ${isOpen ? "block anim" : "hidden"}`} id="mobile-menu">
                 <div className="space-y-1 px-2 pb-3 pt-2">
-                    <a href="/#skills" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200">Skills</a>
-                    <a href="/#projects" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Projects</a>
-                    <a href="/articles" className="w-full hover:bg-dark-acc/55 active:bg-dark-acc active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200" aria-current="page">Articles</a>
+                    <a href="/#skills" className="w-full hover:bg-dark-acc/30 active:bg-dark-acc/50 active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]">Skills</a>
+                    <a href="/#projects" className="w-full hover:bg-dark-acc/30 active:bg-dark-acc/50 active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]" aria-current="page">Projects</a>
+                    <a href="/articles" className="w-full hover:bg-dark-acc/30 active:bg-dark-acc/50 active:border-2 active:border-white border-transparent border-2 box-border block rounded-md px-3 py-2 text-base font-medium active:text-neutral-200 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]" aria-current="page">Articles</a>
                     <div className="sm:hidden px-3 py-2">
                         <ThemeToggle mode={resolvedTheme} toggleMode={setTheme}></ThemeToggle>
                     </div>
