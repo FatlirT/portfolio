@@ -9,8 +9,8 @@
         --light-acc: 255 255 255;
         --shadow: 0 0 0;
         --foreground-rgb: 255 255 255;
-        --background-end-rgb: 0 200 255;
-        --background-start-rgb: 0 100 200;
+        --background-end-rgb: 0 100 200;
+        --background-start-rgb: 0 200 255;
     }
 
     :root[data-theme="dark"] {
@@ -102,7 +102,7 @@ body {
 .toggle-switch {
     box-sizing: border-box;
     display: flex;
-    box-shadow: 3px 1px 3px 0px rgba(0, 0, 0, 0.6);
+    box-shadow: 3px 1px 3px 0px rgba(var(--dark-acc));
     padding: 10px;
     position: absolute;
     z-index: 1000;
