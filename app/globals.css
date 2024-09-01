@@ -48,10 +48,8 @@ body {
 .typewrite-text {
     color: rgb(var(--my-blue));
     font-weight: bolder;
-    font-size: xx-large;
     border-right: 5px solid;
     text-shadow: #ffffff39 3px 6px 9px;
-    width: 100%;
     white-space: nowrap;
     overflow: hidden;
     animation:

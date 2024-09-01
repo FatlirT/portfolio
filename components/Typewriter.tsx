@@ -1,7 +1,15 @@
 'use client';
 import React, { useState } from "react";
 
-const Typewriter = ({ fields }: { fields: { name: string; }[]; }) => {
+import { ImgHTMLAttributes } from "react";
+
+interface props extends ImgHTMLAttributes<HTMLImageElement> {
+    className: string;
+    fields: { name: string; }[];
+
+}
+
+const Typewriter = ({ fields, className }: props) => {
 
     const [fieldIndex, setFieldIndex] = useState(0);
 
@@ -17,7 +25,7 @@ const Typewriter = ({ fields }: { fields: { name: string; }[]; }) => {
     return (
 
         <div className="typewrite">
-            <p className='typewrite-text' style={{ "--stepCount": fields[fieldIndex].name.length } as React.CSSProperties} onAnimationIteration={onAnimationIteration}>{fields[fieldIndex].name}</p>
+            <p className={"typewrite-text text-[8vw] " + className} style={{ "--stepCount": fields[fieldIndex].name.length } as React.CSSProperties} onAnimationIteration={onAnimationIteration}>{fields[fieldIndex].name}</p>
         </div>
 
     );

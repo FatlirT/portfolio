@@ -25,22 +25,18 @@ export default function Home() {
 
   return (
     <>
-      <div className="flex flex-row justify-between w-full items-center">
-        <div className='w-full flex-col'>
-          <h1 className="text-5xl font-black w-full justify-start flex">Hey! <span>👋</span></h1><br /><br /><br className="" />
-          <div className="w-full mb-16">
+      <div id="hero" className="flex flex-row w-full justify-center sm:text-center sm:justify-between text-center shrink-1">
+        <div className='flex flex-col text-nowrap text-center sm:text-left'>
+          <h1 className="text-5xl font-black mb-8">Hey! <span>👋</span></h1>
+          <div className="w-full mb-16 flex flex-col justify-center">
             <div className="pb-2">
               <h1 className="inline-block text-xl">I&apos;m </h1><h1 className='font-bold inline-block text-xl pl-[7px]'>@</h1><h1 className="inline-block text-2xl font-bold pr-[7px]">FatlirT,</h1><h1 className="inline-block text-xl">the</h1>
             </div>
-            <Typewriter fields={fields}></Typewriter>
-            <h1 className='text-xl'>enthusiast!</h1>
-          </div>
-        </div>
-        <div className="relative">
-          <div className='absolute'>
-            <div className="absolute">
-              <Nebula></Nebula>
+            <div id="tw-container" className='w-full text-center flex sm:justify-start justify-center'>
+              <Typewriter className="sm:text-3xl pb-2" fields={fields}></Typewriter>
             </div>
+
+            <h1 className='text-xl'>enthusiast!</h1>
           </div>
         </div>
       </div>
