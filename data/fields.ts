@@ -1,5 +1,8 @@
 const fields = [
     {
+        name: "Software Development",
+    },
+    {
         name: "Software Architecture",
     },
     {
@@ -16,6 +19,12 @@ const fields = [
     },
     {
         name: "DevSecOps",
+    },
+    {
+        name: "Cloud",
+    },
+    {
+        name: "Networking & IT",
     },
 ];
 
