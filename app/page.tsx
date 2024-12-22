@@ -65,12 +65,12 @@ export default function Home() {
 
       <div id="projects" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16 drop-shadow-xl'>Projects</h1>
-        <div className="text-wrap w-full mb-32 flex flex-col text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left">
+        <div className="text-wrap w-full mb-32 flex flex-col text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:text-left space-y-6">
           {
             projects.map((project) =>
               <ProjectCard key={project.name} name={project.name} description={project.description} imageUrls={project.imageUrls} tech={project.tech.map(tech => {
                 return skillsMap[tech];
-              })} soureCodeUrl={project.sourceCodeUrl} url={project.url} wip={project.wip} className='mb-6 flex flex-col lg:flex-row items-center text-center justify-center w-full text-wrap'></ProjectCard>
+              })} soureCodeUrl={project.sourceCodeUrl} url={project.url} wip={project.wip}></ProjectCard>
             )
           }
         </div>
