@@ -49,13 +49,13 @@ const ImageCarousel: React.FC<ImageCarouselProps> = ({ images, interval = 5000 }
                     ))}
                 </div>
                 <button
-                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-light-acc bg-opacity-50 text-white p-2 rounded-full z-10 text-center w-11"
+                    className="absolute top-1/2 left-4 transform -translate-y-1/2 bg-light-acc bg-opacity-50 text-white p-2 rounded-full z-10 text-center w-11 sm:visible hidden"
                     onClick={prevImage}
                 >
                     &lt;
                 </button>
                 <button
-                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-light-acc bg-opacity-50 text-white p-2 rounded-full z-10 text-center w-11"
+                    className="absolute top-1/2 right-4 transform -translate-y-1/2 bg-light-acc bg-opacity-50 text-white p-2 rounded-full z-10 text-center w-11 sm:visible hidden "
                     onClick={nextImage}
                 >
                     &gt;

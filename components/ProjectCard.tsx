@@ -28,7 +28,7 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                     <h1 className='absolute sm:top-2 top-1 left-20 italic font-black drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]'>WIP</h1>
                 </div>
 
-                <div id="project-card-top" className="font-black text-4xl pb-6 pt-4">
+                <div id="project-card-top" className="font-black text-4xl pb-6 pt-4 underline ">
                     {name}
                 </div>
                 <div id="project-card-bot" className="w-full flex-col flex lg:flex-row justify-between space-y-6 px-8 lg:space-x-8">
@@ -53,20 +53,20 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                                     View
                                 </a>
                             </div>
-                            <div id="project-stack" className='flex flex-row space-x-4 items-center'>
-                                <div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-extralight flex-wrap bg-white/45 py-2 px-8 rounded-3xl">
-                                    Stack: <br></br>
-                                    {tech.map(technology => <p key={technology.name}>
-
-                                        <Image
-                                            src={technology.imageUrl}
-                                            alt={technology.name}
-                                            width={50} // Set an appropriate width
-                                            height={50} // Set an appropriate height
-                                            className="rounded" // Add Tailwind classes for styling
-                                        />
-
-                                    </p>)}
+                            <div id="project-stack" className='flex flex-row space-x-4 items-center justify-center'>
+                                <div className="py-4 flex lg:flex-row items-center text-center flex-col justify-center lg:space-x-6 font-extralight flex-wrap bg-white/45 lg:py-2 px-8 rounded-3xl md:space-y-0 space-y-6 space-y-reverse">
+                                    <h1 className='lg:pb-0 pb-4'>Stack:</h1>
+                                    <div id="project-skills-grid" className='grid md:grid-cols-3 grid-cols-2 lg:grid-flow-col gap-4 items-center'>
+                                        {tech.map(technology => <div key={technology.name}>
+                                            <Image
+                                                src={technology.imageUrl}
+                                                alt={technology.name}
+                                                width={50} // Set an appropriate width
+                                                height={50} // Set an appropriate height
+                                                className="rounded" // Add Tailwind classes for styling
+                                            />
+                                        </div>)}
+                                    </div>
                                 </div>
                             </div>
                         </div>
