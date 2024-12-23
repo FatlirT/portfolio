@@ -1,4 +1,4 @@
-import { ImgHTMLAttributes } from "react";
+import Image from 'next/image';
 import ImageCarousel from './ImageCarousel';
 
 interface props {
@@ -35,7 +35,7 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                     <div id="project-card-bot-lhs" className="lg:w-[30rem] w-full flex justify-center">
 
                         <div id="project-image-carousel-container" className="lg:w-full w-full md:w-3/4">
-                            <ImageCarousel images={["/images/seaborn.svg", "/images/prom.svg", "/images/scikit.svg"]} />
+                            <ImageCarousel images={imageUrls} />
                         </div>
 
 
@@ -53,9 +53,20 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                                     View
                                 </a>
                             </div>
-                            <div id="project-stack">
-                                < div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-black flex-wrap">
-                                    {tech.map(technology => <p key={technology.name}>{technology.name}</p>)}
+                            <div id="project-stack" className='flex flex-row space-x-4 items-center'>
+                                <div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-extralight flex-wrap bg-white/45 py-2 px-8 rounded-3xl">
+                                    Stack: <br></br>
+                                    {tech.map(technology => <p key={technology.name}>
+
+                                        <Image
+                                            src={technology.imageUrl}
+                                            alt={technology.name}
+                                            width={50} // Set an appropriate width
+                                            height={50} // Set an appropriate height
+                                            className="rounded" // Add Tailwind classes for styling
+                                        />
+
+                                    </p>)}
                                 </div>
                             </div>
                         </div>

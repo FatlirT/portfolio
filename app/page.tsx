@@ -1,6 +1,5 @@
 import fields from '@/data/fields';
 import projects from '@/data/projects';
-import Nebula from '@/components/Nebula';
 import Typewriter from '@/components/Typewriter';
 import skills from '@/data/skills';
 import SkillCard from '@/components/SkillCard';
