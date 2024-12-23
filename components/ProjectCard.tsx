@@ -40,26 +40,28 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
 
 
                     </div>
-                    <div id="project-card-bot-rhs" className="w-full space-y-6 flex flex-col items-center h-full">
+                    <div id="project-card-bot-rhs" className="w-full space-y-6 flex flex-col items-center justify-between break-words">
                         <div id="project-desc">
-                            <div>{description}</div>
+                            <div>{description} </div>
                         </div>
-                        <div id="project-links">
-                            <a href="" id="project-source">
-                                {soureCodeUrl}
-                            </a>
-                            <a href="" id="project-hosted">
-                                {url}
-                            </a>
-                        </div>
-                        <div id="project-stack">
-                            < div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-black flex-wrap">
-                                {tech.map(technology => <p key={technology.name}>{technology.name}</p>)}
+                        <div id="project-card-bot-rhs-bot" className="space-y-6">
+                            <div id="project-links" className="w-full flex flex-row justify-center space-x-4">
+                                <a target="_blank" href={soureCodeUrl} id="project-source" className="bg-blue-500/70 px-5 py-3 rounded-2xl active:bg-light-acc hover:bg-blue-400/70">
+                                    Code
+                                </a>
+                                <a target="_blank" href={url} id="project-hosted" className=" bg-green-500/70 px-5 py-3 rounded-2xl active:bg-light-acc hover:bg-green-400/70">
+                                    View
+                                </a>
+                            </div>
+                            <div id="project-stack">
+                                < div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-black flex-wrap">
+                                    {tech.map(technology => <p key={technology.name}>{technology.name}</p>)}
+                                </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
+            </div >
 
         </>
     );
