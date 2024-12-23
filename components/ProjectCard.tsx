@@ -19,7 +19,7 @@ interface props {
 const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, url }: props) => {
     return (
         <>
-            <div id="project-card-main" className="w-full max-w-full overflow-clip text-wrap shadow-lg shadow-dark-acc/30 bg-light-acc/35 rounded-3xl p-8 text-xl active:opacity-80 cursor-pointer relative flex flex-col items-center text-center justify-center space-y-6 space-y-reverse">
+            <div id="project-card-main" className="w-full max-w-full overflow-clip text-wrap shadow-lg shadow-dark-acc/30 bg-light-acc/35 rounded-3xl p-8 text-xl cursor-pointer relative flex flex-col items-center text-center justify-center space-y-6 space-y-reverse">
                 <div id='wip-hazard-tape' className={(wip ? "" : "hidden") + " overflow-clip bg-black top-2 shadow-slate-700/70 shadow-lg -left-16 absolute text-center justify-center items-center sm:text-2xl text-[1rem] -rotate-45 w-60 h-9 sm:h-12"}>
                     <div className='bg-yellow-300 w-9 rotate-[22.5deg] h-20 absolute -top-1 left-1' ></div>
                     <div className='bg-yellow-300 w-9 rotate-[22.5deg] h-20 absolute -top-3 left-[35%] -z-30' ></div>
