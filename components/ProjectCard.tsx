@@ -28,18 +28,19 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                     <h1 className='absolute sm:top-2 top-1 left-20 italic font-black drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.8)]'>WIP</h1>
                 </div>
 
-                <div id="project-card-top">
+                <div id="project-card-top" className="font-black text-4xl pb-6 pt-4">
                     {name}
                 </div>
-                <div id="project-card-bot" className="w-full flex-col flex lg:flex-row justify-between items-center space-y-6 px-6">
-                    <div id="project-card-bot-lhs" className="w-3/4 lg:w-1/2">
+                <div id="project-card-bot" className="w-full flex-col flex lg:flex-row justify-between space-y-6 px-8 lg:space-x-8">
+                    <div id="project-card-bot-lhs" className="lg:w-[30rem] w-full flex justify-center">
 
-                        <ImageCarousel images={["/images/seaborn.svg", "/images/prom.svg", "/images/scikit.svg"]}>
+                        <div id="project-image-carousel-container" className="lg:w-full w-full md:w-3/4">
+                            <ImageCarousel images={["/images/seaborn.svg", "/images/prom.svg", "/images/scikit.svg"]} />
+                        </div>
 
-                        </ImageCarousel>
 
                     </div>
-                    <div id="project-card-bot-rhs" className="w-full space-y-6">
+                    <div id="project-card-bot-rhs" className="w-full space-y-6 flex flex-col items-center h-full">
                         <div id="project-desc">
                             <div>{description}</div>
                         </div>
@@ -52,7 +53,7 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                             </a>
                         </div>
                         <div id="project-stack">
-                            < div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-black">
+                            < div className="caption-container items-center text-center flex flex-row justify-center space-x-6 font-black flex-wrap">
                                 {tech.map(technology => <p key={technology.name}>{technology.name}</p>)}
                             </div>
                         </div>
