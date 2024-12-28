@@ -54,9 +54,9 @@ const ProjectCard = ({ name, description, imageUrls, tech, wip, soureCodeUrl, ur
                                 </a>
                             </div>
                             <div id="project-stack" className='flex flex-row space-x-4 items-center justify-center'>
-                                <div className="py-4 flex lg:flex-row items-center text-center flex-col justify-center lg:space-x-6 font-extralight flex-wrap bg-white/45 lg:py-2 px-8 rounded-3xl md:space-y-0 space-y-6 space-y-reverse">
+                                <div className="py-4 flex lg:flex-row items-center text-center flex-col justify-center lg:space-x-6 font-extralight flex-wrap bg-white/45 lg:py-3 px-8 rounded-3xl  lg:space-y-0 space-y-6 space-y-reverse">
                                     <h1 className='lg:pb-0 pb-4'>Stack:</h1>
-                                    <div id="project-skills-grid" className='grid md:grid-cols-3 grid-cols-4 lg:grid-flow-col gap-4 items-center'>
+                                    <div id="project-skills-grid" className='grid grid-cols-4 lg:grid-flow-col gap-4 items-center justify-center'>
                                         {tech.map(technology => <div key={technology.name}>
                                             <Image
                                                 src={technology.imageUrl}
