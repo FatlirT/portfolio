@@ -41,22 +41,28 @@ export default function Home() {
       </div>
 
 
-      <div id="skills" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
+      <div id="skills" className="flex flex-col mb-16 justify-center items-center pt-32">
         <h1 className='text-4xl font-bold mb-16 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.3)]'>Skills</h1>
         {
           Object.keys(skills).map((skillCategory) => {
             return <>
               <h1 className='text-3xl font-black mb-10 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.3)]'>{skillCategory}</h1>
-              <div key={skillCategory} className="mb-32 grid text-center lg:grid-cols-4 lg:text-left md:grid-cols-3 sm:grid-cols-2">
-                {
-                  skills[skillCategory].map((skill) =>
-                    <div key={skill.name} className={'flex flex-row justify-center m-4 ' + (skill.future ? 'saturate-0 opacity-50' : '')}>
-                      <SkillCard className='w-44' skillImageUrl={skill.imageUrl} skillName={skill.name} skillFuture={skill.future}></SkillCard>
-                    </div>
+              <div
+                key={skillCategory}
+                className="grid md:gap-8 gap-4 mb-32 text-left lg:grid-cols-4 md:grid-cols-3 grid-cols-4"
+              >
+                {skills[skillCategory].map((skill) => (
+                  <SkillCard
+                    key={skill.name}
+                    skillImageUrl={skill.imageUrl}
+                    skillName={skill.name}
+                    skillFuture={skill.future}
+                    className="md:text-2xl text-[1.8vw]"
 
-                  )
-                }
+                  />
+                ))}
               </div>
+
             </>;
           })
         }
