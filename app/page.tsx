@@ -41,7 +41,7 @@ export default function Home() {
       </div>
 
 
-      <div id="skills" className="w-full flex flex-col mb-16 justify-center items-center pt-32">
+      <div id="skills" className="w-full flex flex-col mb-16 justify-center items-center pt-32 text-center">
         <h1 className='text-4xl font-bold mb-16 drop-shadow-[0_1.5px_6px_rgba(0,0,0,0.3)]'>Skills</h1>
         {
           Object.keys(skills).map((skillCategory) => {
