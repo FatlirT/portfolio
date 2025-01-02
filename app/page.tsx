@@ -4,6 +4,8 @@ import Typewriter from '@/components/Typewriter';
 import skills from '@/data/skills';
 import SkillCard from '@/components/SkillCard';
 import ProjectCard from '@/components/ProjectCard';
+import ArticleCard from '@/components/ArticleCard';
+import articles from '@/data/articles';
 
 export default function Home() {
 
@@ -83,11 +85,14 @@ export default function Home() {
 
       <div id="featured_articles" className="w-full flex flex-col mb-16 justify-center items-center text-center pt-32">
         <h1 className='text-4xl font-bold mb-16 drop-shadow-xl'>Featured Articles</h1>
-        <div className="mb-32 grid text-center lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-          {/* DISPLAY 3 MOST POPULAR ARTICLES USING ARTICLE VIEW COUNT */}
-          <p>GRID OF MOST POPULAR ARTICLES CARDS WITH TITLE, AUTHOR, DATE AND MAIN IMAGE</p>
-          <p>GRID OF MOST POPULAR ARTICLES CARDS WITH TITLE, AUTHOR, DATE AND MAIN IMAGE</p>
-          <p>GRID OF MOST POPULAR ARTICLES CARDS WITH TITLE, AUTHOR, DATE AND MAIN IMAGE</p>
+        <div className="flex flex-row w-full justify-center items-center md:justify-start md:items-start">
+          <div className="text-wrap gap-y-28 gap-x-28 grid md:grid-cols-3 items-center justify-center text-center grid-rows-auto grid-cols-1 ">
+            {
+              articles.map((article) =>
+                <ArticleCard key={article.title} title={article.title} author={article.author} date={article.date} splashImageUrl={article.splashImageUrl} ></ArticleCard>
+              )
+            }
+          </div>
         </div>
       </div>
     </>
