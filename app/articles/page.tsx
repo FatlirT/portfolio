@@ -19,7 +19,7 @@ export default function Articles() {
                     <div className="text-wrap gap-x-28 grid grid-cols-3 items-center justify-center text-center grid-rows-auto">
                         {
                             articles.map((article) =>
-                                <ArticleCard title={article.title} author={article.author} date={article.date} splashImageUrl={article.splashImageUrl} ></ArticleCard>
+                                <ArticleCard key={article.title} title={article.title} author={article.author} date={article.date} splashImageUrl={article.splashImageUrl} ></ArticleCard>
                             )
                         }
                     </div>
