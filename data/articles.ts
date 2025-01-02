@@ -1,8 +1,9 @@
-const articles = {
-    "Software Development": {
+const articles = [
+    {
+        title: "dsads",
         author: "Software Development",
         date: "Software Development",
-        splashImageUrl: "dsdd",
+        splashImageUrl: "/dsdd",
         body: "Text body with paragraphs, image divs and reference numblets",
         tags: "Software Development",
         references: {
@@ -11,10 +12,11 @@ const articles = {
             3: { title: "dsa", link: "da" },
         },
     },
-    "Software Develospment": {
+    {
+        title: "dsadss",
         author: "Software Development",
         date: "Software Development",
-        splashImageUrl: "dsdd",
+        splashImageUrl: "/dsdd",
         body: "Text body with paragraphs, image divs and reference numblets",
         tags: "Software Development",
         references: {
@@ -23,10 +25,11 @@ const articles = {
             3: { title: "dsa", link: "da" },
         },
     },
-    "Software Develossment": {
+    {
+        title: "dssads",
         author: "Software Development",
         date: "Software Development",
-        splashImageUrl: "dsdd",
+        splashImageUrl: "/dsdd",
         body: "Text body with paragraphs, image divs and reference numblets",
         tags: "Software Development",
         references: {
@@ -35,6 +38,6 @@ const articles = {
             3: { title: "dsa", link: "da" },
         },
     },
-};
+];
 
 export default articles;

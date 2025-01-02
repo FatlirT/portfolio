@@ -84,7 +84,7 @@ export default function Home() {
       <div id="featured_articles" className="w-full flex flex-col mb-16 justify-center items-center text-center pt-32">
         <h1 className='text-4xl font-bold mb-16 drop-shadow-xl'>Featured Articles</h1>
         <div className="mb-32 grid text-center lg:w-full lg:mb-0 lg:grid-cols-3 lg:text-left">
-          {/* DISPLAY 3 MOST POPULAR ARTICLES USING ARTICLE VIEWCOUNT */}
+          {/* DISPLAY 3 MOST POPULAR ARTICLES USING ARTICLE VIEW COUNT */}
           <p>GRID OF MOST POPULAR ARTICLES CARDS WITH TITLE, AUTHOR, DATE AND MAIN IMAGE</p>
           <p>GRID OF MOST POPULAR ARTICLES CARDS WITH TITLE, AUTHOR, DATE AND MAIN IMAGE</p>
           <p>GRID OF MOST POPULAR ARTICLES CARDS WITH TITLE, AUTHOR, DATE AND MAIN IMAGE</p>
