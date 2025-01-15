@@ -11,7 +11,7 @@ const SearchBar = () => {
                         <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z" />
                     </svg>
                 </div>
-                <input id="default-search" className="block w-full p-4 ps-10 text-sm text-white rounded-lg bg-light-acc/10 focus:ring-blue-500 focus:border-blue-500 placeholder-white" placeholder="Search Articles" required />
+                <input id="default-search" className="block w-full p-4 ps-10 pe-24 text-sm text-white rounded-lg bg-light-acc/10 focus:ring-blue-500 focus:border-blue-500 placeholder-white" placeholder="Search Articles" required />
                 <button type="submit" className="text-white absolute end-2.5 bottom-2.5 bg-dark-acc/30 hover:bg-dark-acc/50 focus:ring-[3px] focus:outline-none focus:ring-light-acc/70 active:bg-dark-acc font-medium rounded-lg text-sm px-4 py-2">Search</button>
             </div>
         </form>
