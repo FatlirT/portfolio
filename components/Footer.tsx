@@ -32,7 +32,7 @@ const Footer = () => {
                     </ul>
                 </div>
                 <hr className="my-6 border-light-acc/40 sm:mx-auto lg:my-8" />
-                <span className="block text-sm text-light-acc/50 sm:text-center">© 2024 <a href="#" className="hover:underline">@FatlirT</a>. All Rights Reserved.</span>
+                <span className="block text-sm text-light-acc/50 sm:text-center">© 2025 <a href="#" className="hover:underline">@FatlirT</a>. All Rights Reserved.</span>
             </div>
         </footer >
 
