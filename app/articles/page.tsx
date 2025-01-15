@@ -1,4 +1,5 @@
 import ArticleCard from '@/components/ArticleCard';
+import LinkMy from '@/components/LinkMy';
 import SearchBar from '@/components/SearchBar';
 import articles from '@/data/articles';
 
@@ -7,6 +8,8 @@ export default function Articles() {
     // fetch list of articles of page only.
     // new server request fetch cycle per page.
     // search bar request fetch cycle per search, affects parent component.
+
+    const pageCount = 5;
 
     return (
         <>
@@ -25,6 +28,11 @@ export default function Articles() {
                     </div>
                 </div>
             </div >
+            <div className='w-full flex items-center justify-center text-center page-navigator gap-x-2 text-white/70'>
+                <LinkMy href='/articles'>&lt;</LinkMy> {Array.from({ length: pageCount }, (_, index) => (
+                    <LinkMy key={index + 1} href={`articles/${index + 1}`} >{index + 1}</LinkMy>
+                ))}<LinkMy href='/articles'>&gt;</LinkMy>
+            </div>
         </>
     );
 }

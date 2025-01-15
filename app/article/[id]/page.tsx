@@ -1,6 +1,6 @@
-import Link from "next/link";
 import articles from '@/data/articles';
 import ArticleCard from "@/components/ArticleCard";
+import LinkMy from '@/components/LinkMy';
 
 export default function Article() {
 
@@ -10,7 +10,7 @@ export default function Article() {
     return (
         <>
             <div className="w-full flex flex-row items-start justify-start">
-                <Link href={`/articles`} className="hover:text-my-blue mb-2 font-bold"> &lt; Back to All Articles</Link>
+                <LinkMy href={`/articles`} className="mb-2 font-bold"> &lt; Back to All Articles</LinkMy>
             </div>
 
 
@@ -86,7 +86,7 @@ export default function Article() {
             </div>
 
             <div className="w-full flex flex-row justify-between">
-                <Link href={`/articles/ds`} className="hover:text-my-blue font-extralight">&lt; Previous Article</Link> <Link href={`/articles/ds`} className="hover:text-my-blue mb-2 font-extralight"> Next Article &gt; </Link>
+                <LinkMy href={`/articles/ds`} className="font-extralight">&lt; Previous Article</LinkMy> <LinkMy href={`/articles/ds`} className="mb-2 font-extralight"> Next Article &gt; </LinkMy>
             </div >
         </>
     );
