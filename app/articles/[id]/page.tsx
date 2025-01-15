@@ -23,7 +23,7 @@ export default function Article() {
                 <div className="break-words absolute bottom-0 left-0 w-full px-7 py-6 bg-dark-acc/35 text-white leading-tight space-y-1">
                     <h1 className="w-full mb-1 text-xs">by <u><b>Fatlir Topalli</b></u> on <u><b>10/10/2035</b></u></h1>
 
-                    <h1 className="md:text-2xl text-md font-black">Security best practices when working with Tedsadas dsadsadsd sadsadsrra form.</h1>
+                    <h1 className="md:text-2xl text-lg font-black">Security best practices when working with Tedsadas dsadsadsd sadsadsrra form.</h1>
                 </div >
             </div >
 
